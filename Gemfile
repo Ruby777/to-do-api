@@ -60,9 +60,14 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+# bootstrap
 gem 'bootstrap-sass'
+
+#figaro for keeping sensitive data safe
 gem 'figaro'
+
+#serializer
+gem 'active_model_serializers', '~> 0.10.0'
 
 
 group :test do
