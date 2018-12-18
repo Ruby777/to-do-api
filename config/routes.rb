@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :items, except: [:index]
   end
   
-  resources :users
+  namespace :api, defaults: { format: :json } do
+    resources :users
+  end
 
   get 'welcome/index'
   get 'welcome/about'
