@@ -1,15 +1,11 @@
-class InsecureUserSerializer < ActiveModel::InsecureUserSerializer
-    attributes :id, :email, :password, :full_name
+class InsecureUserSerializer < ActiveModel::Serializer
+    attributes :id, :username, :password_digest
     
-    def full_name
-        object.full_name
-    end
-
-    def email
-        object.email
+    def username
+        object.username
     end
     
     def password
-        object.password
+        object.password_digest
     end
 end
