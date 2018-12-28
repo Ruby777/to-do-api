@@ -71,6 +71,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 
 
 group :test do
+  gem 'nyan-cat-formatter'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
