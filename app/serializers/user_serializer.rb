@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :created_at, :username, :password_digest
+  attributes :id, :created_at, :username, :password
 
   #Delegate the practical definition of 'full_name' to
   #the User model, where it belongs, rather than
@@ -13,7 +13,7 @@ class UserSerializer < ActiveModel::Serializer
     object.created_at.strftime('%B %d, %Y')
   end
 
-  def password_digest
-    object.password_digest
+  def password
+    object.password
   end
 end
